@@ -1,8 +1,8 @@
-{application, prometheus,
+{application, prometheus_erl,
  [{description, "Prometheus.io client in Erlang"},
   {vsn, "4.8.1"},
   {registered, []},
-  {mod, { prometheus, []}},
+  {mod, { prometheus_erl, []}},
   {applications,
    [kernel,
     stdlib
