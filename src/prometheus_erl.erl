@@ -3,7 +3,7 @@
 %% @hidden
 %%%-------------------------------------------------------------------
 
--module(prometheus).
+-module(prometheus_erl).
 
 -behaviour(application).
 
