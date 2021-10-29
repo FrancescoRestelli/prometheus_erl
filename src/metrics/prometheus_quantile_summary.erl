@@ -64,7 +64,7 @@
 
 -include("prometheus.hrl").
 
--include_lib("quantile_estimator/include/quantile_estimator.hrl").
+-include_lib("quantile_estimator.hrl").
 
 -behaviour(prometheus_metric).
 -behaviour(prometheus_collector).
