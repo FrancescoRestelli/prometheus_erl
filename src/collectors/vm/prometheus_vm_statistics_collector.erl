@@ -224,7 +224,7 @@ dirty_stat() ->
 -endif.
 
 enabled_metrics() ->
-  application:get_env(prometheus, vm_statistics_collector_metrics, all).
+  application:get_env(prometheus_erl, vm_statistics_collector_metrics, all).
 
 metric_enabled(Name, Metrics) ->
   Metrics =:= all orelse lists:member(Name, Metrics).

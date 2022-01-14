@@ -75,7 +75,7 @@ setup_instrumenters() ->
     Instrumenter <- prometheus_instrumenter:enabled_instrumenters()].
 
 default_metrics() ->
-  application:get_env(prometheus, default_metrics, []).
+  application:get_env(prometheus_erl, default_metrics, []).
 
 maybe_create_table(Name, {Type, Concurrency}) ->
   case ets:info(Name) of

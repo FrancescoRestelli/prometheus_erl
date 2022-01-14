@@ -131,7 +131,7 @@
 -spec enabled_collectors() -> [collector()].
 enabled_collectors() ->
   lists:usort(
-    case application:get_env(prometheus, collectors) of
+    case application:get_env(prometheus_erl, collectors) of
       undefined -> all_known_collectors();
       {ok, Collectors} -> catch_default_collectors(Collectors)
     end).
@@ -142,7 +142,7 @@ enabled_collectors() ->
     Collector :: collector(),
     Callback  :: collect_mf_callback().
 collect_mf(Registry, Collector, Callback0) ->
-  Callback = case application:get_env(prometheus, global_labels) of
+  Callback = case application:get_env(prometheus_erl, global_labels) of
     undefined ->
       Callback0;
     {ok, Labels0} ->

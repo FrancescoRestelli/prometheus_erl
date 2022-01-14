@@ -270,7 +270,7 @@ metric(Counter, Data, SecondAsPerfCounter) ->
    || #{type := Type, id := ID, counters := #{Counter := Value}} <- Data].
 
 enabled_metrics() ->
-  application:get_env(prometheus, vm_msacc_collector_metrics, all).
+  application:get_env(prometheus_erl, vm_msacc_collector_metrics, all).
 
 metric_enabled(Name, Metrics) ->
   Metrics =:= all orelse lists:member(Name, Metrics).

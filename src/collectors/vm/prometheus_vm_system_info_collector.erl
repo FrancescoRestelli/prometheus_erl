@@ -305,7 +305,7 @@ collect_metrics(Name) ->
   end.
 
 enabled_metrics() ->
-  application:get_env(prometheus, vm_system_info_collector_metrics, all).
+  application:get_env(prometheus_erl, vm_system_info_collector_metrics, all).
 
 metric_enabled(Name, Metrics) ->
   Metrics =:= all orelse lists:member(Name, Metrics).

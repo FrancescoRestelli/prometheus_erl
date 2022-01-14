@@ -378,7 +378,7 @@ metrics1() ->
     metric_node_queue_size(Data)}].
 
 enabled_metrics() ->
-  application:get_env(prometheus, vm_dist_collector_metrics, all).
+  application:get_env(prometheus_erl, vm_dist_collector_metrics, all).
 
 metric_enabled(Name, Metrics) ->
   Metrics =:= all orelse lists:member(Name, Metrics).

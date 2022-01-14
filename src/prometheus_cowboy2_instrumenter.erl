@@ -277,7 +277,7 @@ label_value(Label, Metrics) ->
 %% configuration
 
 config() ->
-  application:get_env(prometheus, cowboy_instrumenter, ?DEFAULT_CONFIG).
+  application:get_env(prometheus_erl, cowboy_instrumenter, ?DEFAULT_CONFIG).
 
 get_config_value(Key, Default) ->
   proplists:get_value(Key, config(), Default).
